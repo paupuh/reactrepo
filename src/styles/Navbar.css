@@ -1,0 +1,26 @@
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.main-nav button {
+  background: grey;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

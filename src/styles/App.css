@@ -1,0 +1,138 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:focus, button:focus {
+  outline: 3px solid #007BFF; /* blue focus ring */
+  outline-offset: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation styles */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.main-nav button {
+  background: grey;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Section styling */
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+h1, h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Offers grid layout */
+.offers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Hero section with background and overlay */
+.hero-section {
+  height: 100vh;
+  position: relative;
+  background: url('/src/assets/images/your-background.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Overlay layer for hero */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+  z-index: 0;
+}
+
+/* Hero text and button positioned above overlay */
+.hero-section h2,
+.hero-section button {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero button styles with hover animation */
+.hero-section button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 1s ease, color 1s ease;
+  border-radius: 5px;
+}
+
+.hero-section button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Global button styles */
+button {
+  padding: 12px 24px;
+  background: black;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  border-color: black;
+}

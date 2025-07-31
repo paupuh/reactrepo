@@ -1,0 +1,51 @@
+#o-nas {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#o-nas h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.employee-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+  padding: 20px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.employee-row:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.employee-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.employee-info {
+  flex: 1;
+  padding: 0 30px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .employee-row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .employee-info {
+    padding: 20px 0 0 0;
+    text-align: center;
+  }
+}
