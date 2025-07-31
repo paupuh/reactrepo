@@ -1,26 +1,10 @@
-#o-nas {
-  padding: 60px 0;
-  text-align: center;
-}
-
-#o-nas h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
 .employee-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 40px 0;
-  padding: 20px;
+  justify-content: flex-start; /* text and photo close to each other */
   max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.employee-row:nth-of-type(even) {
-  flex-direction: row-reverse;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 .employee-photo {
@@ -32,20 +16,33 @@
   flex-shrink: 0;
 }
 
-.employee-info {
-  flex: 1;
-  padding: 0 30px;
+/* foto on the left, text on the right */
+.employee-row:not(.reversed) .employee-info {
+  padding-left: 20px;  /* odstęp między zdjęciem a tekstem */
+  padding-right: 0;
   text-align: left;
 }
 
+/* reversed :text on the left side */
+.employee-row.reversed {
+  flex-direction: row-reverse;
+}
+
+.employee-row.reversed .employee-info {
+  padding-right: 20px; 
+  padding-left: 0;
+  text-align: left; 
+}
+
+/* Mobile*/
 @media (max-width: 768px) {
   .employee-row {
     flex-direction: column !important;
     text-align: center;
   }
-
+  
   .employee-info {
-    padding: 20px 0 0 0;
-    text-align: center;
+    padding: 20px 0 0 0 !important;
+    text-align: center !important;
   }
 }
