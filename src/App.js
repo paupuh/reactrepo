@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="container">
-      <Navbar scrollToSection={scrollToSection} aria-label="Main navigation" />
+<Navbar scrollToSection={scrollToSection} />
 
       <header>
         <h1>Future Collars Projekt</h1>
@@ -45,7 +45,7 @@ function App() {
           </section>
 
           <h2>Nasze oferty</h2>
-          <div className="offers-grid">
+<div id="oferty" className="offers-grid">
             {offers.map((offer) => (
               <OfferBox
                 key={offer.id}

@@ -7,7 +7,7 @@ function OfferBox({ title, description, isNew }) {
       {isNew && (
         <div className="new-badge">
           <span className="dot"></span> 
-          <span>Nowość</span>
+          <span>nowość</span>
         </div>
       )}
       <h3>{title}</h3>
